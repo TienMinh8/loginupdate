@@ -35,6 +35,11 @@ public class HomeActivity extends AppCompatActivity {
     private static List<User> getListUser(){
         List<User> list = new ArrayList<>();
         list.add(new User(R.drawable.letter_a,"minh"));
+        list.add(new User(R.drawable.letter_a,"error"));
+        list.add(new User(R.drawable.letter_a,"successful"));
+        list.add(new User(R.drawable.letter_a,"aaaaaa"));
+        list.add(new User(R.drawable.letter_a,"bbbbbb"));
+        list.add(new User(R.drawable.letter_a,"cccccc"));
         return list;
     }
 }
