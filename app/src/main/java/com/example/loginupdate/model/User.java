@@ -61,13 +61,15 @@ public class User {
         this.username = username;
     }
 
-    public boolean isValidemail(){
+    public boolean isValidemail() {
         return !TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
-    public boolean isValidpassdword(){
-        return !TextUtils.isEmpty(password) && password.length() >=6;
+
+    public boolean isValidpassdword() {
+        return !TextUtils.isEmpty(password) && password.length() >= 6;
     }
-    public boolean isValidre_password(){
+
+    public boolean isValidre_password() {
         return !TextUtils.isEmpty(re_password) && TextUtils.isEmpty(password);
     }
 }
