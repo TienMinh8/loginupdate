@@ -21,6 +21,12 @@ public class User {
         this.password = password;
     }
 
+    public User(String streemail, String strepassword, String stre_password) {
+        this.email = streemail;
+        this.password = strepassword;
+        this.re_password = stre_password;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -65,11 +71,11 @@ public class User {
         return !TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 
-    public boolean isValidpassdword() {
+    public boolean isValidpassword() {
         return !TextUtils.isEmpty(password) && password.length() >= 6;
     }
 
     public boolean isValidre_password() {
-        return !TextUtils.isEmpty(re_password) && TextUtils.isEmpty(password);
+        return re_password != null && re_password.equals(password);
     }
 }

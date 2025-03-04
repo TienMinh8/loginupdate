@@ -62,6 +62,7 @@
             android:drawableStart="@drawable/custom_lock_icon"
             android:drawablePadding="10dp"
             android:hint="Password"
+            android:inputType="textPassword"
             android:paddingStart="10dp" />
 
         <TextView
@@ -94,12 +95,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/error"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="20dp"
-            android:text="ConstraintLayout"
+            android:layout_marginEnd="20dp"
             android:drawableEnd="@drawable/custom_change"
-            app:cornerRadius="15dp"
-            />
+            android:text="ConstraintLayout"
+            app:cornerRadius="15dp" />
 
         <Button
             android:id="@+id/btn_signin"

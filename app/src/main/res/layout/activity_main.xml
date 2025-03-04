@@ -9,13 +9,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="16dp"
-        android:orientation="vertical"
         android:gravity="left"
-        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/back"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:layout_marginLeft="16dp"
@@ -30,9 +31,9 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="32dp"
             android:text="Welcome Back"
-            android:textStyle="bold"
             android:textColor="@color/white"
-            android:textSize="32dp">
+            android:textSize="32dp"
+            android:textStyle="bold">
 
         </TextView>
 
@@ -78,6 +79,7 @@
                         android:drawableStart="@drawable/custom_lock_icon"
                         android:drawablePadding="10dp"
                         android:hint="Password"
+                        android:inputType="textPassword"
                         android:paddingStart="15dp"
                         android:paddingEnd="15dp">
 
@@ -115,20 +117,20 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="20dp"
-                        android:gravity="right"
-                        android:layout_marginEnd="20dp">
+                        android:layout_marginEnd="20dp"
+                        android:gravity="right">
 
                         <Button
                             android:id="@+id/change"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:layout_constraintStart_toStartOf="parent"
-                            android:text="RelativeLayout"
                             android:drawableEnd="@drawable/custom_change"
+                            android:text="RelativeLayout"
                             app:cornerRadius="15dp"
-                            />
+                            app:layout_constraintStart_toStartOf="parent" />
 
                     </LinearLayout>
+
                     <Button
                         android:id="@+id/btn_signin"
                         android:layout_width="match_parent"
@@ -136,12 +138,11 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="100dp"
                         android:layout_marginRight="16dp"
-                        app:backgroundTint="@color/primary"
-                        app:cornerRadius="10dp"
-                        android:textColor="@color/white"
                         android:text="SIGN IN"
-                        android:textSize="18dp">
-                    </Button>
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        app:backgroundTint="@color/primary"
+                        app:cornerRadius="10dp"></Button>
                 </LinearLayout>
 
                 <Space
@@ -157,8 +158,7 @@
                     android:gravity="center"
                     android:paddingBottom="50dp"
                     android:text="Don't have an account?"
-                    android:textColor="@color/primary">
-                </TextView>
+                    android:textColor="@color/primary"></TextView>
 
             </LinearLayout>
         </LinearLayout>

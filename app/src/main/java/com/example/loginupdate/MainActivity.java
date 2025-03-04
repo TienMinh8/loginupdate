@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +26,7 @@ public class   MainActivity extends AppCompatActivity {
     private EditText email, password;
     private TextView error, reg;
     private Button btnsignin, change;
+    private ImageView back;
     private RecyclerView recyclerview;
     private List<User> userList;
     private UserAdapter userAdapter;
@@ -48,15 +50,15 @@ public class   MainActivity extends AppCompatActivity {
         btnsignin = findViewById(R.id.btn_signin);
         reg = findViewById(R.id.reg);
         change = findViewById(R.id.change);
+        back = findViewById(R.id.back);
     }
 
     private void setupListener(){
         btnsignin.setOnClickListener(v -> clickLogin());
         reg.setOnClickListener(v -> navigateToRegister());
         change.setOnClickListener(v -> backchange());
+        back.setOnClickListener(v -> back());
     }
-
-
 
     private void clickLogin(){
 
@@ -85,5 +87,8 @@ public class   MainActivity extends AppCompatActivity {
     }
     private void backchange() {
         startActivity(new Intent(MainActivity.this, ChangeActivity.class));
+    }
+    private void back() {
+        startActivity(new Intent(MainActivity.this, MainActivity.class));
     }
 }

@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,11 +21,12 @@ import com.example.loginupdate.model.User;
 
 import java.util.List;
 
-public class   ChangeActivity extends AppCompatActivity {
+public class ChangeActivity extends AppCompatActivity {
 
     private EditText email, password;
     private TextView error;
     private Button btnsignin, change;
+    private ImageView back;
     private RecyclerView recyclerview;
     private List<User> userList;
     private UserAdapter userAdapter;
@@ -41,22 +43,23 @@ public class   ChangeActivity extends AppCompatActivity {
 
     }
 
-    private void initView(){
+    private void initView() {
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
         error = findViewById(R.id.error);
         btnsignin = findViewById(R.id.btn_signin);
         change = findViewById(R.id.change);
+        back = findViewById(R.id.back);
     }
 
-    private void setupListener(){
+    private void setupListener() {
         btnsignin.setOnClickListener(v -> clickLogin());
         change.setOnClickListener(v -> backchange());
+        back.setOnClickListener(v -> back());
     }
 
 
-
-    private void clickLogin(){
+    private void clickLogin() {
 
         String stremail = email.getText().toString().trim();
         String strpassword = password.getText().toString().trim();
@@ -68,7 +71,7 @@ public class   ChangeActivity extends AppCompatActivity {
         }
         User user = new User(stremail, strpassword);
         if (stremail.equals("admin@gmail.com") && strpassword.equals("1234567")) {
-            Toast.makeText(ChangeActivity.this,"Login successful", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ChangeActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(ChangeActivity.this, HomeActivity.class));
             finish();
         } else {
@@ -78,10 +81,14 @@ public class   ChangeActivity extends AppCompatActivity {
         }
     }
 
-    private void navigateToRegister(){
+    private void navigateToRegister() {
         startActivity(new Intent(ChangeActivity.this, ResgisterActivity.class));
     }
+
     private void backchange() {
+        startActivity(new Intent(ChangeActivity.this, MainActivity.class));
+    }
+    private void back() {
         startActivity(new Intent(ChangeActivity.this, MainActivity.class));
     }
 }
