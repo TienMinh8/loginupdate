@@ -30,6 +30,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="32dp"
             android:text="Welcome Back"
+            android:textStyle="bold"
             android:textColor="@color/white"
             android:textSize="32dp">
 
@@ -49,15 +50,14 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0"
                     android:orientation="vertical">
 
                     <EditText
                         android:id="@+id/email"
                         android:layout_width="match_parent"
-                        android:layout_height="71dp"
+                        android:layout_height="70dp"
                         android:layout_marginHorizontal="16dp"
-                        android:layout_marginTop="32dp"
+                        android:layout_marginTop="20dp"
                         android:background="@drawable/boder_edittext"
                         android:drawableStart="@drawable/custom_email_icon"
                         android:drawablePadding="10dp"
@@ -71,15 +71,17 @@
                     <EditText
                         android:id="@+id/password"
                         android:layout_width="match_parent"
-                        android:layout_height="71dp"
+                        android:layout_height="70dp"
                         android:layout_marginHorizontal="16dp"
-                        android:layout_marginTop="32dp"
+                        android:layout_marginTop="20dp"
                         android:background="@drawable/boder_edittext"
                         android:drawableStart="@drawable/custom_lock_icon"
                         android:drawablePadding="10dp"
                         android:hint="Password"
                         android:paddingStart="15dp"
-                        android:paddingEnd="15dp"></EditText>
+                        android:paddingEnd="15dp">
+
+                    </EditText>
 
                     <TextView
                         android:id="@+id/error"
@@ -109,6 +111,24 @@
 
                     </TextView>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:gravity="right"
+                        android:layout_marginEnd="20dp">
+
+                        <Button
+                            android:id="@+id/change"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:text="RelativeLayout"
+                            android:drawableEnd="@drawable/custom_change"
+                            app:cornerRadius="15dp"
+                            />
+
+                    </LinearLayout>
                     <Button
                         android:id="@+id/btn_signin"
                         android:layout_width="match_parent"

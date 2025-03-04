@@ -40,6 +40,7 @@ public class HomeActivity extends AppCompatActivity {
         list.add(new User(R.drawable.letter_a,"aaaaaa"));
         list.add(new User(R.drawable.letter_a,"bbbbbb"));
         list.add(new User(R.drawable.letter_a,"cccccc"));
+        list.add(new User(R.drawable.custom_email_icon,"nguyễn tiến minh"));
         return list;
     }
 }

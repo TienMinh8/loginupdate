@@ -13,20 +13,18 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.loginupdate.adapter.UserAdapter;
 import com.example.loginupdate.model.User;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class   MainActivity extends AppCompatActivity {
 
     private EditText email, password;
     private TextView error, reg;
-    private Button btnsignin;
+    private Button btnsignin, change;
     private RecyclerView recyclerview;
     private List<User> userList;
     private UserAdapter userAdapter;
@@ -49,12 +47,16 @@ public class   MainActivity extends AppCompatActivity {
         error = findViewById(R.id.error);
         btnsignin = findViewById(R.id.btn_signin);
         reg = findViewById(R.id.reg);
+        change = findViewById(R.id.change);
     }
 
     private void setupListener(){
         btnsignin.setOnClickListener(v -> clickLogin());
         reg.setOnClickListener(v -> navigateToRegister());
+        change.setOnClickListener(v -> backchange());
     }
+
+
 
     private void clickLogin(){
 
@@ -80,5 +82,8 @@ public class   MainActivity extends AppCompatActivity {
 
     private void navigateToRegister(){
         startActivity(new Intent(MainActivity.this, ResgisterActivity.class));
+    }
+    private void backchange() {
+        startActivity(new Intent(MainActivity.this, ChangeActivity.class));
     }
 }

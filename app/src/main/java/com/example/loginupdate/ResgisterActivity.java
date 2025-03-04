@@ -1,5 +1,6 @@
 package com.example.loginupdate;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -46,7 +47,7 @@ public class ResgisterActivity extends AppCompatActivity {
         error.setVisibility(View.VISIBLE);
 
         if(user.isValidre_password() && user.isValidemail() && user.isValidre_password()){
-            setContentView(R.layout.activiry_login);
+            startActivity(new Intent(ResgisterActivity.this, MainActivity.class));
         }else{
             error.setText("Email or password or re-enter password invalid");
         }
